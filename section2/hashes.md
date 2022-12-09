@@ -52,3 +52,35 @@ HDEL company age
 
 HGETALL company
 ```
+
+## More Examples
+
+#1. `HINCRBY` updates a number value in a hash, adding an integer to it. The integer can be negative if you want to subtract from a number.
+
+`HINCRBYFLOAT` updates a number value in a hash, adding a float to it. The float can be negative if you want to subtract from a number.
+
+```
+HINCRBY company age 10
+
+HINCRBYFLOAT company age 1.001
+
+HGETALL company
+```
+
+#2. `HSTRLEN` returns the length of a string defined inside of a hash.
+
+```
+HSTRLEN company name
+```
+
+#3. `HKEYS` lists all of the keys defined in a hash.
+
+```
+HKEYS company
+```
+
+#4. `HVALS` lists all of the values stored in a hash.
+
+```
+HVALS company
+```
