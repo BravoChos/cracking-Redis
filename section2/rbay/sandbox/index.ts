@@ -21,6 +21,9 @@ const run = async () => {
 
 	const car = await client.hGetAll('car');
 
+	// # note!
+	// HGET always return emtpty object instead of null if the key doesn't exsist
+
 	console.log(car);
 };
 run();
