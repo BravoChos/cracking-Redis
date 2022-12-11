@@ -12,9 +12,11 @@ const run = async () => {
 			cylinders: 8
 		},
 
-		// below will cause an error!!
-		owner: null, // null.toString() => X
-		service: undefined // undefined => X
+		// below will cause an error!! => how to fix?
+		// owner: null , // null.toString() => X
+		owner: null || '', // null.toString() => X
+		// service: undefined // undefined => X
+		service: undefined || '' // undefined => X
 	});
 
 	const car = await client.hGetAll('car');
